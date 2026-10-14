@@ -1,0 +1,54 @@
+{
+  "name": "thirdparty-pulse",
+  "version": "1.0.0",
+  "description": "Third-party script weight and load-cost report for static sites: estimated bytes, requests and main-thread time per page and per vendor, with budgets, plus sync-script, duplicate and preconnect checks. SARIF, Action. Zero deps.",
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "thirdparty-pulse": "bin/thirdparty-pulse.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "action.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "third-party",
+    "performance",
+    "web-performance",
+    "performance-budget",
+    "javascript",
+    "core-web-vitals",
+    "static-site",
+    "lighthouse",
+    "sarif",
+    "github-action"
+  ],
+  "author": "Louis Wright <hello@louiswright.co.uk> (https://github.com/MrLouisWright)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrLouisWright/thirdparty-pulse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrLouisWright/thirdparty-pulse/issues"
+  },
+  "homepage": "https://github.com/MrLouisWright/thirdparty-pulse#readme"
+}
