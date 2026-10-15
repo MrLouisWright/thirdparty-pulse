@@ -1,5 +1,7 @@
 # thirdparty-pulse
 
+[![npm version](https://img.shields.io/npm/v/thirdparty-pulse.svg)](https://www.npmjs.com/package/thirdparty-pulse) [![CI](https://github.com/MrLouisWright/thirdparty-pulse/actions/workflows/ci.yml/badge.svg)](https://github.com/MrLouisWright/thirdparty-pulse/actions/workflows/ci.yml) [![Node](https://img.shields.io/node/v/thirdparty-pulse.svg)](https://nodejs.org) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > How much does each third-party script cost your pages? Estimated bytes, requests and main-thread time per page and per vendor, checked against budgets.
 
 Tag managers, chat widgets, pixels and embeds are usually the heaviest JavaScript on a static site, and nobody owns their weight. `thirdparty-pulse` reads your built HTML, finds every third-party script, inline vendor loader, iframe and asset, estimates its transfer size and main-thread cost from a table of common vendors (or the sizes you configure), and fails CI when a page goes over budget. It also catches the loading mistakes that make third parties expensive: synchronous scripts in `<head>`, the same script included twice, and missing or unused preconnects.
