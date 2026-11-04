@@ -179,12 +179,20 @@ The action runs the bundled CLI with Node 20; it has no dependencies to install.
 
 ## Library
 
+Install it in your project first:
+
+```bash
+npm install --save-dev thirdparty-pulse
+```
+
 ```js
 import { check, weightOf, vendorForUrl } from "thirdparty-pulse";
 const report = check("dist", { maxKb: 120 });
 report.info.vendors; // [{ id, vendor, category, kb, pages, requests }]
 vendorForUrl("https://www.googletagmanager.com/gtm.js").kb; // 90
 ```
+
+The package is ESM-only (there is no CommonJS build): use `import`, or `await import("thirdparty-pulse")` from CommonJS.
 
 Types are included.
 
